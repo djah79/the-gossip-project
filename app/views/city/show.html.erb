@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>City</title>
+</head>
+<body>
+
+
+
+<div class="card mx-auto" style="width: 18rem;">
+<%= image_tag("city.jpg", :alt => "city") %>
+  <div class="card-body">
+    <h5 class="card-title">
+       <p class="card-text"> City: <%= @city.name %></p>
+    
+    </h5>
+    </div> 
+    <% @city.users.each do |go| %>
+    <div>
+       
+               <% go.gossips.each do |lo| %>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+           <p><%= go.last_name %></p>
+              
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="well">
+            <p> <%= lo.content %></p><br>
+          </div>
+        </div>
+      </div>
+                      
+      <% end %>
+     
+    </div>
+     <% end %>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>City</title>
+</head>
+<body>
+
+
+
+<div class="card mx-auto" style="width: 18rem;">
+<%= image_tag("city.jpg", :alt => "ville") %>
+  <div class="card-body">
+    <h5 class="card-title">
+       <p class="card-text"> All City</p>
+    
+    </h5>
+    <div> 
+      <% @city.each do |vil| %>
+
+        <%= vil.name %> <%= link_to "Look »", city_path(vil)%> <br>
+
+        <% end %>
+      
+    </div>
+    
+    
+  </div>
+</div>
+
+</body>
+</html>

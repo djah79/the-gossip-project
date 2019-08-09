@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+
+
+
+<div class="card mx-auto" style="width: 18rem;">
+<%= image_tag("avatar.png", :alt => "user picture") %>
+  <div class="card-body">
+    <h5 class="card-title">
+    	<%= @user.last_name %> <%= @user.first_name %>
+    </h5>
+
+    <p class="card-text"> Description: <%= @user.description %></p>
+    <p class="card-text"> Email: <%= @user.email %></p>
+    <p class="card-text"> Age: <%= @user.age %></p>
+     <p class="card-text"> City: <%= @user.city.name %></p>
+     
+   
+  </div>
+</div>
+
+</body>
+</html>
