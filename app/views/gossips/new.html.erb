@@ -24,9 +24,9 @@
         <%= text_area_tag 'content', @gossip.content, placeholder: "Ton potin..." %>
         <br /> <br />
 
-        <%= submit_tag "Create Post" %>
+        <%= submit_tag "Create Gossip" %>
 
-      <% end %>
+  <% end %>
   <% if @gossip.errors.any? %>
     <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
     <ul>

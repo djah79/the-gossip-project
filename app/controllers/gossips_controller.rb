@@ -53,11 +53,16 @@ class GossipsController < ApplicationController
 	    # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
 	     @gossip = Gossip.find(params[:id])
 	     
+	      if @gossip.comments != nil
+	      	@gossip.comments.each do |s|
+ 				s.destroy
+ 			end
+ 			end
   if @gossip.destroy
-  	
-    redirect_to accueil_index_path
+
+   	redirect_to accueil_index_path
   else
-    render :edit
+    render :show
   end
 
 	end

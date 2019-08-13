@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   resources :contact
   resources :users
   resources :city
-
+  resources :gossips do resources :comments end
 end

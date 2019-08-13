@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gossip New</title>
+
+
+</head>
+<body>
+
+
+<h1 class='titre'> Creat User</h1>
+
+<h3>Formulaire d'User</h3>
+
+<div class="container">
+
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+        <%= label_tag 'First Name' %>
+        <%= text_field_tag 'fn',nil, placeholder: "First Name..." %>
+       
+
+        <%= label_tag 'Last Name' %>
+        <%= text_field_tag 'ln', nil, placeholder: "Last Name..." %>
+
+                <%= label_tag 'City id' %>
+        <%= text_field_tag 'c', nil, placeholder: "City id..." %>
+
+                <%= label_tag 'Age' %>
+        <%= text_field_tag 'a', nil, placeholder: "Age..." %>
+
+                <%= label_tag 'Password' %>
+        <%= text_field_tag 'p1', nil, placeholder: "Password..." %>
+
+                <%= label_tag 'Confirm' %>
+        <%= text_field_tag 'p2', nil, placeholder: "Cofirm..." %>
+
+        <br /> <br />
+
+        <%= submit_tag "Create User" %>
+
+  <% end %>
+ <div><%= flash[:success] %></div>
+</div>
+</body>
+
+</html>
